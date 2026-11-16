@@ -1,0 +1,380 @@
+/* ============================================================
+   TRADLINKZ BRAND IDENTITY (NAVY BLUE & BLACK)
+   ============================================================ */
+
+/* Brand Colors:
+   Navy Blue: #0A192F
+   Black: #020C1B
+   Accent (Gold/Silver for contrast): #E6F1FF (Light Blue-White for text)
+   Highlight Red (for alerts/delete): #e94560
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #020C1B; /* Deep Black-Blue background */
+    color: #E6F1FF; /* Crisp light text for contrast */
+    padding: 10px;
+    padding-bottom: 50px; /* Space at the bottom for scrolling */
+}
+
+/* ============================================================
+   HEADERS & NAVIGATION
+   ============================================================ */
+
+header {
+    background-color: #1A2B5E; /* Navy Blue */
+    color: #E6F1FF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #e94560; /* A sharp brand accent line */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#cart-count {
+    background-color: #1A2B5E;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 10px rgba(233, 69, 96, 0.4);
+}
+
+/* ============================================================
+   SECTION TITLES & BUTTONS
+   ============================================================ */
+
+.section-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #E6F1FF;
+    border-left: 4px solid #1A2B5E;
+    padding-left: 10px;
+    letter-spacing: 0.5px;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: #1A2B5E;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+    padding: 8px 0;
+}
+
+.back-btn:active {
+    opacity: 0.7;
+}
+
+/* ============================================================
+   STOREFRONT: CATEGORY GRID
+   ============================================================ */
+
+#category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.category-card {
+    background: #0A192F; /* Navy Blue */
+    padding: 40px 15px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #112240;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.category-card:active {
+    transform: scale(0.96);
+    background: #112240; /* Slightly lighter Navy on tap */
+}
+
+.category-card h3 {
+    font-size: 1.1rem;
+    color: #E6F1FF;
+}
+
+/* ============================================================
+   STOREFRONT: COMPACT PRODUCT GRID
+   ============================================================ */
+
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on mobile */
+    gap: 12px;
+}
+
+.product-card {
+    background: #0A192F;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #112240;
+}
+
+.product-img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: #020C1B;
+}
+
+.product-card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    line-height: 1.3;
+    color: #E6F1FF;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-card .price {
+    color: #e94560;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.product-card .stock {
+    font-size: 0.75rem;
+    color: #8892B0;
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    background-color: #e94560;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto;
+    transition: background 0.2s;
+}
+
+.product-card button:active {
+    background-color: #b3304a; /* Darker red on tap */
+}
+
+/* ============================================================
+   STOREFRONT: CART SECTION
+   ============================================================ */
+
+#cart-section {
+    background: #0A192F;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 25px;
+    border: 1px solid #112240;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+#cart-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #E6F1FF;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #112240;
+    font-size: 0.9rem;
+}
+
+#cart-total {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #E6F1FF;
+    text-align: right;
+}
+
+#checkout-btn {
+    background-color: #e94560;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ============================================================
+   ADMIN PANEL STYLES (Matching Brand)
+   ============================================================ */
+
+#login-screen {
+    max-width: 400px;
+    margin: 50px auto;
+    background: #0A192F;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    border: 1px solid #112240;
+}
+
+#login-screen h1 {
+    color: #E6F1FF;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+#login-screen p {
+    color: #8892B0;
+    margin-bottom: 20px;
+}
+
+#login-screen input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #112240;
+    background: #020C1B;
+    color: #E6F1FF;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#login-screen button {
+    width: 100%;
+    background-color: #1A2B5E;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#admin-screen header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logout-btn {
+    background-color: #112240;
+    color: #E6F1FF;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-card {
+    background: #0A192F;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    border: 1px solid #112240;
+}
+
+.admin-card h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #E6F1FF;
+    border-bottom: 1px solid #112240;
+    padding-bottom: 10px;
+}
+
+.admin-card input[type="text"],
+.admin-card input[type="number"],
+.admin-card select,
+.admin-card textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid #112240;
+    background: #020C1B;
+    color: #E6F1FF;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.admin-card textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.admin-card button {
+    background-color: #e94560;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.admin-list-item {
+    background: #020C1B;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 4px solid #e94560;
+    border-top: 1px solid #112240;
+    border-right: 1px solid #112240;
+    border-bottom: 1px solid #112240;
+}
+
+.admin-list-item small {
+    color: #8892B0;
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.delete-product-btn {
+    background-color: #112240;
+    color: #e94560;
+    border: 1px solid #e94560;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 5px;
+}

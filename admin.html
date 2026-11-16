@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradlinkz Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="login-screen">
+        <h1>Tradlinkz Admin</h1>
+        <input type="email" id="email-input" placeholder="Admin Email" style="margin-bottom: 10px;">
+        <input type="password" id="password-input" placeholder="Password">
+        <button id="login-btn">Enter</button>
+        <p id="login-error" style="color: #e94560; font-weight: bold;"></p>
+    </section>
+
+    <section id="admin-screen" style="display: none;">
+        <header>
+            <h1>Admin Panel</h1>
+            <button id="logout-btn">Logout</button>
+        </header>
+        <div class="admin-card">
+            <h2>Add Category</h2>
+            <input type="text" id="category-name" placeholder="Category name">
+            <button id="add-category-btn">Add Category</button>
+            <p id="category-message"></p>
+            <div id="category-list"></div>
+        </div>
+        <div class="admin-card">
+            <h2>Add Product</h2>
+            <input type="text" id="product-name" placeholder="Product name">
+            <input type="number" id="product-price" placeholder="Price (₦)">
+            <select id="product-category"><option value="">Select category</option></select>
+            <textarea id="product-description" placeholder="Description"></textarea>
+            <input type="number" id="product-stock" placeholder="Stock quantity">
+            <input type="file" id="product-image" accept="image/*">
+            <img id="image-preview" style="display: none; max-width: 100%;">
+            <button id="add-product-btn">Add Product</button>
+            <p id="product-message"></p>
+        </div>
+        <div class="admin-card">
+            <h2>Existing Products</h2>
+            <div id="admin-product-list"></div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <!-- 1. Load the Supabase Library FIRST -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <!-- 2. Then load your data.js (which uses the library) -->
+    <script src="data.js"></script>
+    
+    <!-- 3. Then load admin.js -->
+    <script src="admin.js"></script>
+</body>
+</html>
+  
+</body>
+</html>

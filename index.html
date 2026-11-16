@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradlinkz | Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Tradlinkz</h1>
+        <div id="cart-count">Cart: 0</div>
+    </header>
+
+    <main>
+        <section id="category-view">
+            <h2 class="section-title">Shop by Category</h2>
+            <div id="category-grid">
+                <p>Loading categories...</p>
+            </div>
+        </section>
+
+        <section id="product-view" style="display: none;">
+            <button id="back-to-categories" class="back-btn">← Back to Categories</button>
+            <h2 id="current-category-title" class="section-title"></h2>
+            <div id="product-list"></div>
+        </section>
+
+        <section id="cart-section" style="display: none;">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p id="cart-total">Total: ₦0</p>
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </section>
+    </main>
+
+    <!-- SUPABASE LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
