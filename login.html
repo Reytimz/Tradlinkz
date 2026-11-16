@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradlinkz | Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="login-screen" style="margin-top: 50px;">
+        <h1>Tradlinkz</h1>
+        <p id="auth-subtitle" style="margin-bottom: 20px;">Welcome back</p>
+        
+        <input type="email" id="auth-email" placeholder="Email Address" style="margin-bottom: 10px;">
+        <input type="password" id="auth-password" placeholder="Password">
+        
+        <button id="auth-submit-btn">Log In</button>
+        <p id="auth-error" style="color: #e94560; font-weight: bold; margin-top: 10px; text-align: center;"></p>
+        
+        <p style="margin-top: 20px; color: #8892B0; text-align: center;">
+            <span id="toggle-text">Don't have an account?</span> 
+            <span id="toggle-link" style="color: #e94560; cursor: pointer; font-weight: bold;">Sign Up</span>
+        </p>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="data.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

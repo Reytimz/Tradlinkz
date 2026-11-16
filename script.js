@@ -1,3 +1,11 @@
+// CHECK IF USER IS LOGGED IN
+async function checkUserLogin() {
+    const { data: { session } } = await supabaseClient.auth.getSession();
+    if (!session) {
+        window.location.href = 'login.html'; // Kick them out if not logged in
+    }
+}
+checkUserLogin();
 let cart = JSON.parse(localStorage.getItem('tradlinkz-cart')) || [];
 
 const categoryView = document.getElementById('category-view');
