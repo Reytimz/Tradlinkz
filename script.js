@@ -155,3 +155,47 @@ checkoutBtn.addEventListener('click', function() {
 // 6. START THE SHOP
 renderCategories();
 updateCartUI();
+// ---------- SEARCH FUNCTIONALITY ----------
+const searchInput = document.getElementById('search-input');
+
+searchInput.addEventListener('input', async function() {
+    const query = searchInput.value.toLowerCase().trim();
+    
+    if (query === '') {
+        // If search is empty, go back to categories
+        productView.style.display = 'none';
+        categoryView.style.display = 'block';
+        return;
+    }
+
+    // Show product view, hide categories
+    categoryView.style.display = 'none';
+    productView.style.display = 'block';
+    currentCategoryTitle.textContent = 'Search Results';
+    productList.innerHTML = '<p>Searching...</p>';
+
+    const allProducts = await getProducts();
+    const filtered = allProducts.filter(function(p) {
+        return p.name.toLowerCase().includes(query);
+    });
+
+    productList.innerHTML = '';
+    if (filtered.length === 0) {
+        productList.innerHTML = '<p>No products found.</p>';
+        return;
+    }
+
+    filtered.forEach(function(product) {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        const imgSrc = product.image ? product.image : 'https://via.placeholder.com/150?text=No+Image';
+        
+        card.innerHTML = `
+            <img src="${imgSrc}" alt="${product.name}" class="product-img">
+            <h3>${product.name}</h3>
+            <p class="price">₦${Number(product.price).toLocaleString()}</p>
+            <button onclick="addToCart('${product.id}')">Add to Cart</button>
+        `;
+        productList.appendChild(card);
+    });
+});
